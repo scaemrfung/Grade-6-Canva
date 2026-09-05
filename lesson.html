@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson · Grade 6 Tech</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;650;700&family=Newsreader:opsz,wght@6..72,500;6..72,560;6..72,650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const n = Number(new URLSearchParams(location.search).get("n") || 0);
+    const lesson = LESSONS.find((l) => l.n === n) || LESSONS[0];
+    document.title = `Lesson ${lesson.n} · ${lesson.title}`;
+    const prev = LESSONS.find((l) => l.n === lesson.n - 1);
+    const next = LESSONS.find((l) => l.n === lesson.n + 1);
+    const teacherSteps = (lesson.teacherSteps || []).map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
+    document.getElementById("app").innerHTML = `
+      <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
+        <div>
+          <p class="kicker">Lesson ${lesson.n} of 12 · ${lesson.minutes} minutes</p>
+          <h1>${lesson.title}</h1>
+          <p class="lead">${lesson.project} · ${lesson.focus}</p>
+        </div>
+        <div class="toolbar">
+          <button class="ghost-btn" onclick="window.print()">Print</button>
+        </div>
+      </div>
+      <div class="actions">
+        ${prev ? `<a class="btn btn-ghost" href="lesson.html?n=${prev.n}">← ${prev.short}</a>` : `<a class="btn btn-ghost" href="index.html">Course map</a>`}
+        ${next ? `<a class="btn btn-primary" href="lesson.html?n=${next.n}">${next.short} →</a>` : `<a class="btn btn-primary" href="final.html">Final poster →</a>`}
+      </div>
+      <div class="note teacher-only">
+        <h3>Teacher notes</h3>
+        <ul>${lesson.teacher.map((t) => `<li>${t}</li>`).join("")}</ul>
+      </div>
+      <div class="note">
+        <h3>Learning goals</h3>
+        <ul>${lesson.goals.map((g) => `<li>${g}</li>`).join("")}</ul>
+      </div>
+      ${teacherSteps ? `<div class="note teacher-only"><h3>Teacher setup steps</h3><ol class="steps">${teacherSteps}</ol></div>` : ""}
+      <div class="note">
+        <h3 class="student-only">Your steps</h3>
+        <h3 class="teacher-only">Student steps</h3>
+        <ol class="steps">
+          ${lesson.studentSteps.map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("")}
+        </ol>
+      </div>
+      <div class="note">
+        <h3>Challenge</h3>
+        <p>${lesson.challenge}</p>
+      </div>
+    `;
+  </script>
+</body>
+</html>
