@@ -13,7 +13,7 @@
   <div id="app">
     <p class="kicker">Classroom</p>
     <h1>Four hand-in projects</h1>
-    <p class="lead">These four designs are submitted for assessment. Each one has a must-include list and a 4-point rubric.</p>
+    <p class="lead">These four designs are submitted for assessment. Follow the matching lesson’s click-by-click steps, then check the must-include list before you hand in.</p>
     <div id="project-list"></div>
   </div>
   <script src="lessons-a1.js"></script>
@@ -22,17 +22,20 @@
   <script src="data.js"></script>
   <script src="app.js"></script>
   <script>
+    const LESSON_FOR = { 1: 1, 2: 6, 3: 8, 4: 11 };
     document.getElementById("project-list").innerHTML = PROJECTS.map((p) => `
       <div class="note">
-        <div class="soft-kicker">Project ${p.n} · ${p.due}</div>
-        <h3>${p.title}</h3>
-        <p>${p.blurb}</p>
+        <div class="soft-kicker">Project ${p.n} · ${esc(p.due)}</div>
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.blurb)}</p>
+        <p><a href="lesson.html?n=${LESSON_FOR[p.n]}">Open the matching lesson →</a></p>
         <p><strong>Must include</strong></p>
-        <ul>${p.must.map((m) => `<li>${m}</li>`).join("")}</ul>
+        <ul>${p.must.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>
         <div class="teacher-only">
           <p><strong>Rubric</strong></p>
-          <ul>${p.rubric.map((r) => `<li>${r}</li>`).join("")}</ul>
+          <ul>${p.rubric.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>
         </div>
+        <p class="student-only hint">Your teacher will score this with a 4-point rubric. Hit every must-include item.</p>
       </div>
     `).join("");
   </script>

@@ -22,43 +22,57 @@
     document.title = `Lesson ${lesson.n} · ${lesson.title}`;
     const prev = LESSONS.find((l) => l.n === lesson.n - 1);
     const next = LESSONS.find((l) => l.n === lesson.n + 1);
-    const teacherSteps = (lesson.teacherSteps || []).map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
+    const p = lessonProgress(lesson.n);
     document.getElementById("app").innerHTML = `
       <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
         <div>
-          <p class="kicker">Lesson ${lesson.n} of 12 · ${lesson.minutes} minutes</p>
-          <h1>${lesson.title}</h1>
-          <p class="lead">${lesson.project} · ${lesson.focus}</p>
+          <p class="kicker" id="lesson-kicker">Lesson ${lesson.n} · ${lesson.minutes} minutes${p.stamped ? " · stamped" : ""}</p>
+          <h1>${esc(lesson.title)}</h1>
+          <p class="lead">Today you make: ${esc(lesson.project)}. ${esc(lesson.focus)}</p>
         </div>
         <div class="toolbar">
           <button class="ghost-btn" onclick="window.print()">Print</button>
         </div>
       </div>
       <div class="actions">
-        ${prev ? `<a class="btn btn-ghost" href="lesson.html?n=${prev.n}">← ${prev.short}</a>` : `<a class="btn btn-ghost" href="index.html">Course map</a>`}
-        ${next ? `<a class="btn btn-primary" href="lesson.html?n=${next.n}">${next.short} →</a>` : `<a class="btn btn-primary" href="final.html">Final poster →</a>`}
+        ${prev ? `<a class="btn btn-ghost" href="lesson.html?n=${prev.n}">← ${esc(prev.short)}</a>` : `<a class="btn btn-ghost" href="index.html">Course map</a>`}
+        ${next ? `<a class="btn btn-primary" href="lesson.html?n=${next.n}">${esc(next.short)} →</a>` : `<a class="btn btn-primary" href="final.html">Final poster →</a>`}
+        <button type="button" class="btn ${p.stamped ? "btn-primary" : "btn-ghost"}" data-stamp="${lesson.n}">${p.stamped ? "Stamped complete" : "Stamp complete"}</button>
       </div>
+      <p class="count" id="step-count">${p.steps.length} of ${lesson.studentSteps.length} student steps checked</p>
       <div class="note teacher-only">
         <h3>Teacher notes</h3>
-        <ul>${lesson.teacher.map((t) => `<li>${t}</li>`).join("")}</ul>
+        <ul>${lesson.teacher.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
       </div>
       <div class="note">
         <h3>Learning goals</h3>
-        <ul>${lesson.goals.map((g) => `<li>${g}</li>`).join("")}</ul>
+        <ul>${lesson.goals.map((g) => `<li>${esc(g)}</li>`).join("")}</ul>
       </div>
-      ${teacherSteps ? `<div class="note teacher-only"><h3>Teacher demo</h3><ol class="steps">${teacherSteps}</ol></div>` : ""}
+      ${(lesson.teacherSteps || []).length ? `
+      <div class="note teacher-only">
+        <h3>Teacher demo — click each step as you model it</h3>
+        <p class="hint">Project Canva. Pause after every click so students can copy you.</p>
+        ${stepCards(lesson.n, "demo", lesson.teacherSteps)}
+      </div>` : ""}
       <div class="note">
-        <h3 class="student-only">Your steps</h3>
-        <h3 class="teacher-only">Student steps</h3>
-        <ol class="steps">
-          ${lesson.studentSteps.map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("")}
-        </ol>
+        <h3 class="student-only">Your steps — tap each one as you finish</h3>
+        <h3 class="teacher-only">Student steps — project these</h3>
+        <p class="hint student-only">Do these in order. Tap a step when it is done so you can see where you left off.</p>
+        <p class="hint teacher-only">Walk the room with this list. Each line is one click or one short action in Canva.</p>
+        ${stepCards(lesson.n, "steps", lesson.studentSteps)}
       </div>
-      ${lesson.checklist ? `<div class="note"><h3>Done when</h3><ul>${lesson.checklist.map((c) => `<li>${c}</li>`).join("")}</ul></div>` : ""}
-      ${lesson.mistakes ? `<div class="note"><h3>Watch out for</h3><ul>${lesson.mistakes.map((c) => `<li>${c}</li>`).join("")}</ul></div>` : ""}
+      <div class="note">
+        <h3>Done when</h3>
+        <p class="hint">Check every box before you download.</p>
+        ${checkCards(lesson.n, lesson.checklist || [])}
+      </div>
+      <div class="note">
+        <h3>Watch out for</h3>
+        <ul>${(lesson.mistakes || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+      </div>
       <div class="note">
         <h3>Challenge</h3>
-        <p>${lesson.challenge}</p>
+        <p>${esc(lesson.challenge)}</p>
       </div>
     `;
   </script>
