@@ -1,1 +1,2 @@
+const LESSONS_A = LESSONS_A1.concat(LESSONS_A2);
 const LESSONS = LESSONS_A.concat(LESSONS_B);

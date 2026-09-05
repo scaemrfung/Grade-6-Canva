@@ -11,6 +11,9 @@
 </head>
 <body>
   <div id="app"></div>
+  <script src="lessons-a1.js"></script>
+  <script src="lessons-a2.js"></script>
+  <script src="lessons-b.js"></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
   <script>
@@ -19,7 +22,7 @@
     document.title = `Lesson ${lesson.n} · ${lesson.title}`;
     const prev = LESSONS.find((l) => l.n === lesson.n - 1);
     const next = LESSONS.find((l) => l.n === lesson.n + 1);
-    const teacherSteps = (lesson.teacherSteps || []).map((s, i) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
+    const teacherSteps = (lesson.teacherSteps || []).map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
     document.getElementById("app").innerHTML = `
       <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
         <div>
