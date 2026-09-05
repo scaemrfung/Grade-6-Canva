@@ -19,7 +19,7 @@
     document.title = `Lesson ${lesson.n} · ${lesson.title}`;
     const prev = LESSONS.find((l) => l.n === lesson.n - 1);
     const next = LESSONS.find((l) => l.n === lesson.n + 1);
-    const teacherSteps = (lesson.teacherSteps || []).map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
+    const teacherSteps = (lesson.teacherSteps || []).map((s, i) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("");
     document.getElementById("app").innerHTML = `
       <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
         <div>
@@ -43,7 +43,7 @@
         <h3>Learning goals</h3>
         <ul>${lesson.goals.map((g) => `<li>${g}</li>`).join("")}</ul>
       </div>
-      ${teacherSteps ? `<div class="note teacher-only"><h3>Teacher setup steps</h3><ol class="steps">${teacherSteps}</ol></div>` : ""}
+      ${teacherSteps ? `<div class="note teacher-only"><h3>Teacher demo</h3><ol class="steps">${teacherSteps}</ol></div>` : ""}
       <div class="note">
         <h3 class="student-only">Your steps</h3>
         <h3 class="teacher-only">Student steps</h3>
@@ -51,6 +51,8 @@
           ${lesson.studentSteps.map((s) => `<li><strong>${s[0]}.</strong> ${s[1]}</li>`).join("")}
         </ol>
       </div>
+      ${lesson.checklist ? `<div class="note"><h3>Done when</h3><ul>${lesson.checklist.map((c) => `<li>${c}</li>`).join("")}</ul></div>` : ""}
+      ${lesson.mistakes ? `<div class="note"><h3>Watch out for</h3><ul>${lesson.mistakes.map((c) => `<li>${c}</li>`).join("")}</ul></div>` : ""}
       <div class="note">
         <h3>Challenge</h3>
         <p>${lesson.challenge}</p>

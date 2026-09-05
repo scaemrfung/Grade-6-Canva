@@ -240,7 +240,9 @@ h3 { font-size: 22px; margin: 0 0 8px; }
 }
 .note h3, .note h4 { font-family: var(--font-sans); }
 .steps { padding-left: 18px; }
-.steps li { margin: 8px 0; }
+.steps li { margin: 10px 0; }
+.note ul { padding-left: 18px; }
+.note li { margin: 8px 0; }
 .teacher-only.hidden-role, .student-only.hidden-role { display: none !important; }
 
 .toolbar { display: flex; gap: 8px; justify-content: flex-end; }
