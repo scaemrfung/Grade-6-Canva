@@ -15,68 +15,76 @@
       <div>
         <p class="kicker">Grade 6 Technology · Canva Education</p>
         <h1>Learn to use and create with Canva, one 30-minute lesson at a time.</h1>
-        <p class="lead">Thirteen lessons a substitute can teach from the page. Students leave with real designs. No textbook, no extra login beyond Canva Education.</p>
+        <p class="lead">Thirteen click-by-click lessons a substitute can teach from the page. Students leave with a real design. No textbook, no extra login beyond Canva Education.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="lesson.html?n=0">Teach lesson 0 →</a>
+          <a class="btn btn-primary" id="teach-now" href="lesson.html?n=0">Teach lesson 0 →</a>
           <a class="btn btn-ghost" href="how-to.html">How the class works</a>
         </div>
         <div class="meta-row">
           <span>13 lessons</span>
           <span>4 hand-in projects</span>
           <span>1 print-ready poster</span>
+          <span id="stamp-meta">0 of 13 stamped</span>
         </div>
       </div>
-      <aside class="panel">
-        <div class="soft-kicker">This week’s lesson</div>
-        <div style="color:var(--muted);font-size:14px;margin-bottom:6px;">Account setup · Lesson 0</div>
-        <h3>Create your Canva Education account</h3>
-        <p style="color:var(--muted);font-size:14.5px;">Teachers get verified. Students join the class with school email. Then everyone can use premium Canva tools for free.</p>
-        <a href="lesson.html?n=0">Open the full lesson →</a>
-      </aside>
+      <aside class="panel" id="this-week"></aside>
     </div>
+
     <div style="display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:42px;">
-      <h2 style="margin:0;">Course map</h2>
-      <div style="color:var(--subtle);font-size:14px;">0–12 plus a final poster</div>
+      <h2 style="margin:0;">Units</h2>
+      <div style="color:var(--subtle);font-size:14px;">Jump to a stretch of the course</div>
     </div>
     <div class="cards" style="margin-top:16px;">
       <a class="card" href="lesson.html?n=0">
         <div class="card-top"><div class="icon-pill">0</div></div>
-        <div style="margin-top:12px;"><h3>Start here</h3><div class="weeks">Lesson 0</div></div>
+        <h3>Start here</h3>
+        <div class="weeks">Lesson 0</div>
         <p>Create the Canva Education account and join the class.</p>
-        <div class="complete">Required before designing</div>
       </a>
       <a class="card" href="lesson.html?n=1">
         <div class="card-top"><div class="icon-pill">1–4</div></div>
-        <div style="margin-top:12px;"><h3>Foundation</h3><div class="weeks">Lessons 1–4</div></div>
+        <h3>Foundation</h3>
+        <div class="weeks">Lessons 1–4</div>
         <p>Interface, elements, typography, and photo editing.</p>
       </a>
       <a class="card" href="lesson.html?n=5">
         <div class="card-top"><div class="icon-pill">5–8</div></div>
-        <div style="margin-top:12px;"><h3>Core skills</h3><div class="weeks">Lessons 5–8</div></div>
+        <h3>Core skills</h3>
+        <div class="weeks">Lessons 5–8</div>
         <p>Color, branding, layout, and infographics.</p>
       </a>
       <a class="card" href="lesson.html?n=9">
         <div class="card-top"><div class="icon-pill">9–11</div></div>
-        <div style="margin-top:12px;"><h3>Application</h3><div class="weeks">Lessons 9–11</div></div>
+        <h3>Application</h3>
+        <div class="weeks">Lessons 9–11</div>
         <p>Event posters, presentations, and a branded social pack.</p>
       </a>
       <a class="card" href="lesson.html?n=12">
         <div class="card-top"><div class="icon-pill">12</div></div>
-        <div style="margin-top:12px;"><h3>Portfolio</h3><div class="weeks">Lesson 12</div></div>
+        <h3>Portfolio</h3>
+        <div class="weeks">Lesson 12</div>
         <p>Curate best work and write a short reflection.</p>
       </a>
       <a class="card" href="final.html">
-        <div class="card-top"><div class="icon-pill">★</div><span class="badge">Print</span></div>
-        <div style="margin-top:12px;"><h3>Final poster</h3><div class="weeks">Culminating project</div></div>
+        <div class="card-top"><div class="icon-pill">P</div><span class="badge">Print</span></div>
+        <h3>Final poster</h3>
+        <div class="weeks">Culminating project</div>
         <p>One large poster, ready for classroom printing.</p>
       </a>
     </div>
+
+    <div style="display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:36px;">
+      <h2 style="margin:0;">All 13 lessons</h2>
+      <div style="color:var(--subtle);font-size:14px;">Tap a row. Stamp it when the class is done.</div>
+    </div>
+    <div class="lesson-list" id="lesson-list" style="margin-top:14px;"></div>
+
     <h2>The 30-minute block</h2>
     <div class="cards">
       <div class="note" style="margin:0;"><strong>5 min</strong><br>Warm-up and open yesterday’s file.</div>
-      <div class="note" style="margin:0;"><strong>8 min</strong><br>Teacher models one new Canva skill.</div>
-      <div class="note" style="margin:0;"><strong>12 min</strong><br>Students make the lesson project.</div>
-      <div class="note" style="margin:0;"><strong>5 min</strong><br>Save, download, and two quick shares.</div>
+      <div class="note" style="margin:0;"><strong>8 min</strong><br>Teacher models one new Canva skill, click by click.</div>
+      <div class="note" style="margin:0;"><strong>12 min</strong><br>Students follow the numbered steps on the lesson page.</div>
+      <div class="note" style="margin:0;"><strong>5 min</strong><br>Save a PNG, two quick shares, stamp the lesson.</div>
     </div>
   </div>
   <script src="lessons-a1.js"></script>
