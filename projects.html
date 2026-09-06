@@ -31,11 +31,8 @@
         <p><a href="lesson.html?n=${LESSON_FOR[p.n]}">Open the matching lesson →</a></p>
         <p><strong>Must include</strong></p>
         <ul>${p.must.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>
-        <div class="teacher-only">
-          <p><strong>Rubric</strong></p>
-          <ul>${p.rubric.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>
-        </div>
-        <p class="student-only hint">Your teacher will score this with a 4-point rubric. Hit every must-include item.</p>
+        <p><strong>Rubric</strong></p>
+        <ul>${p.rubric.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>
       </div>
     `).join("");
   </script>
