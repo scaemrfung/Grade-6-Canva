@@ -1,27 +1,4 @@
-const ROLE_KEY = "g6canva-role";
 const PROGRESS_KEY = "g6canva-progress";
-
-function role() {
-  return localStorage.getItem(ROLE_KEY) === "student" ? "student" : "teacher";
-}
-
-function setRole(next) {
-  localStorage.setItem(ROLE_KEY, next);
-  applyRole();
-}
-
-function applyRole() {
-  const current = role();
-  document.querySelectorAll("[data-role-btn]").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.roleBtn === current);
-  });
-  document.querySelectorAll(".teacher-only").forEach((el) => {
-    el.classList.toggle("hidden-role", current !== "teacher");
-  });
-  document.querySelectorAll(".student-only").forEach((el) => {
-    el.classList.toggle("hidden-role", current !== "student");
-  });
-}
 
 function blankProgress() {
   return { steps: [], demo: [], checks: [], stamped: false };
@@ -107,7 +84,6 @@ function nav() {
     <a class="nav-link ${mark("how-to")}" href="how-to.html"><span class="nav-ico">☰</span> How to teach</a>
     <a class="nav-link ${mark("projects")}" href="projects.html"><span class="nav-ico">▣</span> Hand-in projects</a>
     <a class="nav-link ${mark("final")}" href="final.html"><span class="nav-ico">⎙</span> Final poster</a>
-    <a class="nav-link teacher-only ${mark("teachers")}" href="teachers.html"><span class="nav-ico">✉</span> Teacher hub</a>
     <div class="nav-label">Lessons</div>
     <p class="nav-meta">${stampedCount()} of ${LESSONS.length} stamped</p>
     ${LESSONS.map((l) => {
@@ -139,10 +115,6 @@ function header() {
             <div class="brand-sub">Canva \u00b7 13 lessons</div>
           </div>
         </a>
-      </div>
-      <div class="role-toggle" role="group" aria-label="View mode">
-        <button type="button" data-role-btn="teacher">Teacher</button>
-        <button type="button" data-role-btn="student">Student</button>
       </div>
     </header>
   `;
@@ -276,9 +248,6 @@ function mountChrome() {
       <main class="main" id="main">${page}</main>
     </div>
   `;
-  document.querySelectorAll("[data-role-btn]").forEach((btn) => {
-    btn.addEventListener("click", () => setRole(btn.dataset.roleBtn));
-  });
   const overlay = document.querySelector(".nav-overlay");
   document.querySelector("[data-menu]").addEventListener("click", () => {
     overlay.hidden = !overlay.hidden;
@@ -286,7 +255,6 @@ function mountChrome() {
   overlay.addEventListener("click", (event) => {
     if (event.target.closest("a")) overlay.hidden = true;
   });
-  applyRole();
   bindProgress();
   renderHomeExtras();
 }
