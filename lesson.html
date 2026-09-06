@@ -40,7 +40,7 @@
         <button type="button" class="btn ${p.stamped ? "btn-primary" : "btn-ghost"}" data-stamp="${lesson.n}">${p.stamped ? "Stamped complete" : "Stamp complete"}</button>
       </div>
       <p class="count" id="step-count">${p.steps.length} of ${lesson.studentSteps.length} student steps checked</p>
-      <div class="note teacher-only">
+      <div class="note">
         <h3>Teacher notes</h3>
         <ul>${lesson.teacher.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
       </div>
@@ -49,16 +49,14 @@
         <ul>${lesson.goals.map((g) => `<li>${esc(g)}</li>`).join("")}</ul>
       </div>
       ${(lesson.teacherSteps || []).length ? `
-      <div class="note teacher-only">
+      <div class="note">
         <h3>Teacher demo — click each step as you model it</h3>
         <p class="hint">Project Canva. Pause after every click so students can copy you.</p>
         ${stepCards(lesson.n, "demo", lesson.teacherSteps)}
       </div>` : ""}
       <div class="note">
-        <h3 class="student-only">Your steps — tap each one as you finish</h3>
-        <h3 class="teacher-only">Student steps — project these</h3>
-        <p class="hint student-only">Do these in order. Tap a step when it is done so you can see where you left off.</p>
-        <p class="hint teacher-only">Walk the room with this list. Each line is one click or one short action in Canva.</p>
+        <h3>Student steps — tap each one as you finish</h3>
+        <p class="hint">Do these in order. Each line is one click or one short action in Canva.</p>
         ${stepCards(lesson.n, "steps", lesson.studentSteps)}
       </div>
       <div class="note">
