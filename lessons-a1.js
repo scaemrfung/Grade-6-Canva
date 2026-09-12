@@ -4,7 +4,7 @@ const LESSONS_A1 = [
     short: "Canva account",
     title: "Create Your Canva Education Account",
     project: "Required first step",
-    minutes: 30,
+    minutes: 60,
     focus: "Teachers verify a free Canva Education account and students join the class so everyone can use premium tools.",
     goals: [
       "Teachers create or convert a Canva Education account and get verified.",
@@ -57,7 +57,7 @@ const LESSONS_A1 = [
     short: "Welcome to Canva",
     title: "Welcome to Canva World!",
     project: "All About Me name card",
-    minutes: 30,
+    minutes: 60,
     focus: "Log in, make a custom-size design, add text and an icon, then download a PNG.",
     goals: [
       "Find Create a design, Text, Elements, and Share.",
@@ -110,7 +110,7 @@ const LESSONS_A1 = [
     short: "Elements & shapes",
     title: "Design Superpowers – Elements & Shapes",
     project: "Hobby mood board",
-    minutes: 30,
+    minutes: 60,
     focus: "Use gradients, shapes, icons, shadows, grouping, and overlap.",
     goals: [
       "Fill a page with a gradient background.",
@@ -159,7 +159,7 @@ const LESSONS_A1 = [
     short: "Typography",
     title: "Words That Pop!",
     project: "Motivational quote poster",
-    minutes: 30,
+    minutes: 60,
     focus: "Pair fonts, use one strong text effect, and keep the quote readable from a distance.",
     goals: [
       "Use no more than 2–3 fonts.",

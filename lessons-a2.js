@@ -4,7 +4,7 @@ const LESSONS_A2 = [
     short: "Photo magic",
     title: "Photo Magic",
     project: "Dream vacation collage",
-    minutes: 30,
+    minutes: 60,
     focus: "Upload or search photos, remove backgrounds, control layers, and use transparency.",
     goals: [
       "Add stock photos and at least one upload if possible.",
@@ -53,7 +53,7 @@ const LESSONS_A2 = [
     short: "Color theory",
     title: "Color Theory for Kids",
     project: "Two mood versions of a quote poster",
-    minutes: 30,
+    minutes: 60,
     focus: "Warm vs cool color families and keeping a scheme consistent.",
     goals: [
       "Copy an existing design instead of starting over.",
@@ -99,7 +99,7 @@ const LESSONS_A2 = [
     short: "Personal logo",
     title: "Brand Yourself – Logo Design",
     project: "Personal logo",
-    minutes: 30,
+    minutes: 60,
     focus: "A simple logo with initials, one symbol, few colors, and a transparent PNG.",
     goals: [
       "Design a logo that still works when it is small.",
