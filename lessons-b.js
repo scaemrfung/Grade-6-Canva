@@ -4,7 +4,7 @@ const LESSONS_B = [
     short: "Layout & grids",
     title: "Layout Secrets",
     project: "Instagram-style event post",
-    minutes: 30,
+    minutes: 60,
     focus: "Rule of thirds, visual hierarchy, white space, and placing a logo in a consistent spot.",
     goals: [
       "Turn on rulers and guides.",
@@ -53,7 +53,7 @@ const LESSONS_B = [
     short: "Infographic",
     title: "Infographic Power",
     project: "A Day in the Life infographic",
-    minutes: 30,
+    minutes: 60,
     focus: "A tall page that tells a day with a chart, icons, arrows, and very short text.",
     goals: [
       "Use a tall canvas.",
@@ -101,7 +101,7 @@ const LESSONS_B = [
     short: "Event poster",
     title: "Big & Bold – Event Poster",
     project: "Fake school event poster",
-    minutes: 30,
+    minutes: 60,
     focus: "A large poster that still reads from across the classroom.",
     goals: [
       "Use a large poster size.",
@@ -150,7 +150,7 @@ const LESSONS_B = [
     short: "Presentation",
     title: "Presentation Skills with Canva",
     project: "4–6 slide mini-presentation",
-    minutes: 30,
+    minutes: 60,
     focus: "Big visuals, little text, one simple animation, and a short talk.",
     goals: [
       "Create a 16:9 presentation.",
@@ -197,7 +197,7 @@ const LESSONS_B = [
     short: "Social pack",
     title: "Social Media Content Pack",
     project: "3-piece branded set",
-    minutes: 30,
+    minutes: 60,
     focus: "Same logo, colors, and fonts across a square post, a vertical story, and a thank-you graphic.",
     goals: [
       "Write a tiny brand kit: colors and fonts.",
@@ -243,7 +243,7 @@ const LESSONS_B = [
     short: "Portfolio",
     title: "Final Showcase + Portfolio",
     project: "Multi-page portfolio",
-    minutes: 30,
+    minutes: 60,
     focus: "Choose strongest work, add a short reflection, and share or present.",
     goals: [
       "Build a cover page with name and logo.",
