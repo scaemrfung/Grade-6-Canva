@@ -151,6 +151,29 @@ function checkCards(n, items) {
   </ul>`;
 }
 
+
+function exampleCards(examples) {
+  if (!examples || !examples.length) return "";
+  return `
+      <div class="note examples-note">
+        <h3>Example designs</h3>
+        <p class="hint">Student-quality samples for this lesson. Open one in Canva to explore how it was built.</p>
+        <div class="examples-gallery">
+          ${examples.map((ex) => `
+            <article class="example-card">
+              <a class="example-thumb-link" href="${esc(ex.url)}" target="_blank" rel="noopener noreferrer">
+                <img class="example-thumb" src="${esc(ex.thumb)}" alt="${esc(ex.title)}" loading="lazy" />
+              </a>
+              <div class="example-meta">
+                <span class="example-label">${esc(ex.label)}</span>
+                <strong class="example-title">${esc(ex.title)}</strong>
+                <a class="btn btn-ghost example-open" href="${esc(ex.url)}" target="_blank" rel="noopener noreferrer">Open in Canva ↗</a>
+              </div>
+            </article>`).join("")}
+        </div>
+      </div>`;
+}
+
 function renderHomeExtras() {
   const weekBox = document.getElementById("this-week");
   if (weekBox) {

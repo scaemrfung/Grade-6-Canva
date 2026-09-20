@@ -68,6 +68,7 @@
         <h3>Watch out for</h3>
         <ul>${(lesson.mistakes || []).map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
       </div>
+      ${exampleCards(lesson.examples)}
       <div class="note">
         <h3>Challenge</h3>
         <p>${esc(lesson.challenge)}</p>
