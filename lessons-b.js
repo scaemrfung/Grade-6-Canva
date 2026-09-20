@@ -46,7 +46,11 @@ const LESSONS_B = [
       "Making the date bigger than the event name.",
       "Filling every gap with extra icons."
     ],
-    challenge: "Make a worst possible layout on purpose (tiny title, huge clutter, no space). Then write two sentences explaining why it fails."
+    challenge: "Make a worst possible layout on purpose (tiny title, huge clutter, no space). Then write two sentences explaining why it fails.",
+    examples: [
+      { label: "Example A", title: "Spring Art Fair Post – Example A", url: "https://www.canva.com/d/7UV7nA_Mq_ugiYA", thumb: "examples/lesson-7-a.png" },
+      { label: "Example B", title: "Coding Club Kickoff Post – Example B", url: "https://www.canva.com/d/5nUuFVQL-I-QjQF", thumb: "examples/lesson-7-b.png" },
+    ],
   },
   {
     n: 8,
@@ -94,7 +98,11 @@ const LESSONS_B = [
       "Writing full sentences beside every icon.",
       "Scattering icons with no path for the eye to follow."
     ],
-    challenge: "Future Me version: the same infographic for age 25. Change the chart and icons to match that day."
+    challenge: "Future Me version: the same infographic for age 25. Change the chart and icons to match that day.",
+    examples: [
+      { label: "Example A", title: "A Day in My Life – Example A", url: "https://www.canva.com/d/xt9geRFaNjlogsV", thumb: "examples/lesson-8-a.png" },
+      { label: "Example B", title: "Kai's Day Infographic – Example B", url: "https://www.canva.com/d/g_yBrDuzp4n7Cnw", thumb: "examples/lesson-8-b.png" },
+    ],
   },
   {
     n: 9,
@@ -143,7 +151,11 @@ const LESSONS_B = [
       "Cramming five photos onto a poster that will be read from far away.",
       "Forgetting the place or the time."
     ],
-    challenge: "Design a poster for a ridiculous event (World Pillow Fight Championship) that still looks 100% official and exciting."
+    challenge: "Design a poster for a ridiculous event (World Pillow Fight Championship) that still looks 100% official and exciting.",
+    examples: [
+      { label: "Example A", title: "Midnight Library Lock-In Poster – Example A", url: "https://www.canva.com/d/c4WuMFGOSR2eSdF", thumb: "examples/lesson-9-a.png" },
+      { label: "Example B", title: "Super Science Expo Poster – Example B", url: "https://www.canva.com/d/1vKbY823O-emmXv", thumb: "examples/lesson-9-b.png" },
+    ],
   },
   {
     n: 10,
@@ -190,7 +202,11 @@ const LESSONS_B = [
       "Animating every object so the slide looks busy.",
       "Making 12 slides for a 90-second talk."
     ],
-    challenge: "Add one surprise reveal slide at the end (a big photo or unexpected fact) that makes your partner say whoa."
+    challenge: "Add one surprise reveal slide at the end (a big photo or unexpected fact) that makes your partner say whoa.",
+    examples: [
+      { label: "Example A", title: "My Hobby: Baking – Example A", url: "https://www.canva.com/d/PtNY2Sm5ZWJr7LK", thumb: "examples/lesson-10-a.png" },
+      { label: "Example B", title: "Skateboarding – Example B", url: "https://www.canva.com/d/FHguV9nlXmHv5lo", thumb: "examples/lesson-10-b.png" },
+    ],
   },
   {
     n: 11,
@@ -236,7 +252,11 @@ const LESSONS_B = [
       "A different font on the thank-you graphic.",
       "Forgetting the logo on one piece."
     ],
-    challenge: "Add a fourth piece: a 2–3 frame carousel (connected squares) that tells a tiny story or gives three quick tips."
+    challenge: "Add a fourth piece: a 2–3 frame carousel (connected squares) that tells a tiny story or gives three quick tips.",
+    examples: [
+      { label: "Example A", title: "StarCraft Kids Club Post – Example A", url: "https://www.canva.com/d/VqoiHRO1MfPBxHC", thumb: "examples/lesson-11-a.png" },
+      { label: "Example B", title: "StarCraft Kids Club Story – Example B", url: "https://www.canva.com/d/R3OBXxpWV3GtJTC", thumb: "examples/lesson-11-b.png" },
+    ],
   },
   {
     n: 12,
@@ -282,7 +302,11 @@ const LESSONS_B = [
       "Cover that is busier than the work inside.",
       "Skipping the reflection page."
     ],
-    challenge: "Pick one piece you would hang in the hallway. On the reflection page, add one extra sentence that starts I would hang this because…"
+    challenge: "Pick one piece you would hang in the hallway. On the reflection page, add one extra sentence that starts I would hang this because…",
+    examples: [
+      { label: "Example A", title: "Maya Chen Portfolio – Example A", url: "https://www.canva.com/d/EfqwWm-aDRavLB3", thumb: "examples/lesson-12-a.png" },
+      { label: "Example B", title: "Jordan Lee Portfolio – Example B", url: "https://www.canva.com/d/TT7OgSi1pew5cTR", thumb: "examples/lesson-12-b.png" },
+    ],
   }
 ];
 

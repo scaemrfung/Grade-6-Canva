@@ -347,3 +347,62 @@ h3 { font-size: 22px; margin: 0 0 8px; }
   background: transparent;
 }
 @media print { .site-updated-stamp { display: none !important; } }
+
+
+/* Example designs gallery */
+.examples-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.example-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.example-thumb-link {
+  display: block;
+  background: #f3efe6;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.example-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.example-meta {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.example-label {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.example-title {
+  font-size: 14.5px;
+  font-weight: 650;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.example-open {
+  align-self: flex-start;
+  margin-top: 4px;
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .examples-gallery { grid-template-columns: 1fr; }
+}
+@media print {
+  .examples-note .example-open { display: none; }
+}

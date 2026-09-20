@@ -50,7 +50,11 @@ const LESSONS_A1 = [
       "Creating a second Canva account instead of logging into the first one.",
       "Typing the class code with extra spaces."
     ],
-    challenge: "Help one classmate log in and join the class without doing it for them. Talk them through each click."
+    challenge: "Help one classmate log in and join the class without doing it for them. Talk them through each click.",
+    examples: [
+      { label: "Example A", title: "Welcome to Canva Class – Example A", url: "https://www.canva.com/d/bU8jN8c4sT3ivBm", thumb: "examples/lesson-0-a.png" },
+      { label: "Example B", title: "Welcome to Canva Class – Example B", url: "https://www.canva.com/d/q28ECTSaTr3al58", thumb: "examples/lesson-0-b.png" },
+    ],
   },
   {
     n: 1,
@@ -103,7 +107,11 @@ const LESSONS_A1 = [
       "Dragging a photo when you only needed a simple icon.",
       "Forgetting to rename Untitled design."
     ],
-    challenge: "Make a secret-code version of your name. Replace 2 or 3 letters with emojis (for example I ♡ ⚽). Ask a classmate to decode it in 10 seconds."
+    challenge: "Make a secret-code version of your name. Replace 2 or 3 letters with emojis (for example I ♡ ⚽). Ask a classmate to decode it in 10 seconds.",
+    examples: [
+      { label: "Example A", title: "All About Me – Maya Chen (Example A)", url: "https://www.canva.com/d/O_BKfzKXNPF3OLf", thumb: "examples/lesson-1-a.png" },
+      { label: "Example B", title: "All About Me – Jordan Lee (Example B)", url: "https://www.canva.com/d/QuqJkcA7iQ_buHV", thumb: "examples/lesson-1-b.png" },
+    ],
   },
   {
     n: 2,
@@ -152,7 +160,11 @@ const LESSONS_A1 = [
       "Forgetting to lock the background and dragging it around.",
       "Using side handles and squashing circles into ovals."
     ],
-    challenge: "Mystery mood board: delete the title and any words. Use only shapes and icons. See if a classmate can guess the hobby in 10 seconds."
+    challenge: "Mystery mood board: delete the title and any words. Use only shapes and icons. See if a classmate can guess the hobby in 10 seconds.",
+    examples: [
+      { label: "Example A", title: "Ava's Hobby Board – Example A", url: "https://www.canva.com/d/OxuI0Ck3Z5T06-k", thumb: "examples/lesson-2-a.png" },
+      { label: "Example B", title: "Sam's Hobby Board – Example B", url: "https://www.canva.com/d/bc2HAWiF2mG3XKt", thumb: "examples/lesson-2-b.png" },
+    ],
   },
   {
     n: 3,
@@ -201,6 +213,10 @@ const LESSONS_A1 = [
       "Stacking Shadow + Lift + Splice + Curve on the same word.",
       "Placing white text on a pale background."
     ],
-    challenge: "Make two mini versions of the same quote: one loud (wild but still readable) and one quiet (simple and elegant). Decide which mood fits the words."
+    challenge: "Make two mini versions of the same quote: one loud (wild but still readable) and one quiet (simple and elegant). Decide which mood fits the words.",
+    examples: [
+      { label: "Example A", title: "Quote Poster – Be the reason (Example A)", url: "https://www.canva.com/d/VDoWeUyO3hihOxj", thumb: "examples/lesson-3-a.png" },
+      { label: "Example B", title: "Quote Poster – Mistakes help me grow (Example B)", url: "https://www.canva.com/d/GqFTUdqhO8MTplv", thumb: "examples/lesson-3-b.png" },
+    ],
   }
 ];

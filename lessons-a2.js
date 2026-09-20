@@ -46,7 +46,11 @@ const LESSONS_A2 = [
       "Covering every photo with stickers until the place disappears.",
       "Leaving a leftover halo after Background Remover and not cleaning it."
     ],
-    challenge: "Make it surreal. Use Background Remover more than once so you appear in space, under the sea, or on a funny animal."
+    challenge: "Make it surreal. Use Background Remover more than once so you appear in space, under the sea, or on a funny animal.",
+    examples: [
+      { label: "Example A", title: "Dream Trip – Japan (Example A)", url: "https://www.canva.com/d/ErF5Wv3fcejk80F", thumb: "examples/lesson-4-a.png" },
+      { label: "Example B", title: "Dream Vacation – Costa Rica (Example B)", url: "https://www.canva.com/d/lmb6oA5pbK-9cc1", thumb: "examples/lesson-4-b.png" },
+    ],
   },
   {
     n: 5,
@@ -92,7 +96,11 @@ const LESSONS_A2 = [
       "Leaving one leftover color from the other family.",
       "Choosing colors that make the quote unreadable."
     ],
-    challenge: "One-color mystery version: pick a single color and use only lighter and darker shades of that color (a monochrome poster)."
+    challenge: "One-color mystery version: pick a single color and use only lighter and darker shades of that color (a monochrome poster).",
+    examples: [
+      { label: "Example A", title: "Warm Mood Quote – Example A", url: "https://www.canva.com/d/uONbl3aaWGI5beF", thumb: "examples/lesson-5-a.png" },
+      { label: "Example B", title: "Cool Mood Quote – Example B", url: "https://www.canva.com/d/rN2OAlnfhX8Rq5C", thumb: "examples/lesson-5-b.png" },
+    ],
   },
   {
     n: 6,
@@ -139,6 +147,10 @@ const LESSONS_A2 = [
       "Using 6 colors and 3 fonts.",
       "Making letters so decorative they cannot be read at small size."
     ],
-    challenge: "Design a second logo for an imaginary creature using the same rules: initials or short name, one symbol, 2–3 colors, transparent PNG."
+    challenge: "Design a second logo for an imaginary creature using the same rules: initials or short name, one symbol, 2–3 colors, transparent PNG.",
+    examples: [
+      { label: "Example A", title: "Personal Logo MC – Example A", url: "https://www.canva.com/d/xWfmdGxuXywJTd3", thumb: "examples/lesson-6-a.png" },
+      { label: "Example B", title: "Personal Logo JL – Example B", url: "https://www.canva.com/d/BFfBNhtarvdARa1", thumb: "examples/lesson-6-b.png" },
+    ],
   }
 ];
