@@ -67,6 +67,15 @@ function pad(n) {
   return String(n).padStart(2, "0");
 }
 
+// Lesson 0 is shown to teachers as "Setup"; lessons 1–12 keep their numbers.
+function lessonLabel(l) {
+  return l.n === 0 ? "Setup" : `Lesson ${l.n}`;
+}
+
+function lessonBadge(l) {
+  return l.n === 0 ? "S" : pad(l.n);
+}
+
 function currentPage() {
   const file = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index";
   return file === "index" ? "index" : file;
@@ -91,7 +100,7 @@ function nav() {
       const active = page === "lesson" && lesson === String(l.n);
       return `
       <a class="nav-link ${active ? "active" : ""}" href="lesson.html?n=${l.n}">
-        <span class="nav-ico">${stamped ? "\u2713" : pad(l.n)}</span> ${esc(l.short)}
+        <span class="nav-ico">${stamped ? "\u2713" : lessonBadge(l)}</span> ${esc(l.short)}
       </a>`;
     }).join("")}
   `;
@@ -112,7 +121,7 @@ function header() {
           </div>
           <div>
             <div class="brand-title">Grade 6 Tech</div>
-            <div class="brand-sub">Canva \u00b7 13 lessons</div>
+            <div class="brand-sub">Canva \u00b7 Setup + 12 lessons</div>
           </div>
         </a>
       </div>
@@ -157,7 +166,7 @@ function exampleCards(examples) {
   return `
       <div class="note examples-note">
         <h3>Example designs</h3>
-        <p class="hint">Student-quality samples for this lesson. Open one in Canva to explore how it was built.</p>
+        <p class="hint">Student-quality samples for this lesson. Open one in Canva to explore how it was built. If Canva asks you to sign in, use your Canva Education account.</p>
         <div class="examples-gallery">
           ${examples.map((ex) => `
             <article class="example-card">
@@ -180,7 +189,7 @@ function renderHomeExtras() {
     const week = firstOpenLesson();
     weekBox.innerHTML = `
       <div class="soft-kicker">This week\u2019s lesson</div>
-      <div class="week-meta">Lesson ${week.n} \u00b7 ${week.minutes} minutes</div>
+      <div class="week-meta">${lessonLabel(week)} \u00b7 ${week.minutes} minutes</div>
       <h3>${esc(week.title)}</h3>
       <p>${esc(week.focus)}</p>
       <a href="lesson.html?n=${week.n}">Open the full lesson \u2192</a>
@@ -188,7 +197,7 @@ function renderHomeExtras() {
     const teach = document.getElementById("teach-now");
     if (teach) {
       teach.href = `lesson.html?n=${week.n}`;
-      teach.textContent = `Teach lesson ${week.n} \u2192`;
+      teach.textContent = week.n === 0 ? "Teach Setup \u2192" : `Teach lesson ${week.n} \u2192`;
     }
     const stampMeta = document.getElementById("stamp-meta");
     if (stampMeta) stampMeta.textContent = `${stampedCount()} of ${LESSONS.length} stamped`;
@@ -201,7 +210,7 @@ function renderHomeExtras() {
     const p = store[String(l.n)] || blankProgress();
     const checked = (p.steps || []).length;
     return `<a class="lesson-row ${i ? "bordered" : ""}" href="lesson.html?n=${l.n}">
-      <span class="step-num ${p.stamped ? "stamped" : ""}">${p.stamped ? "\u2713" : pad(l.n)}</span>
+      <span class="step-num ${p.stamped ? "stamped" : ""}">${p.stamped ? "\u2713" : lessonBadge(l)}</span>
       <span class="step-body">
         <span class="row-top"><strong>${esc(l.title)}</strong><span class="mins">${l.minutes} min</span></span>
         <span class="muted">${esc(l.project)}${checked ? ` \u00b7 ${checked}/${l.studentSteps.length} steps` : ""}</span>
@@ -250,7 +259,7 @@ function refreshLesson(n) {
   }
   const kicker = document.getElementById("lesson-kicker");
   if (kicker && lesson) {
-    kicker.textContent = `Lesson ${lesson.n} \u00b7 ${lesson.minutes} minutes${p.stamped ? " \u00b7 stamped" : ""}`;
+    kicker.textContent = `${lessonLabel(lesson)} \u00b7 ${lesson.minutes} minutes${p.stamped ? " \u00b7 stamped" : ""}`;
   }
   const sidebar = document.querySelector(".sidebar");
   if (sidebar) sidebar.innerHTML = nav();
