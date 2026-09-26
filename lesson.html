@@ -10,7 +10,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <noscript>
+      <h1>Lesson</h1>
+      <p class="lead">This lesson page needs JavaScript to show its steps. Turn JavaScript on, or go back to the <a href="index.html">course map</a> for the full lesson list.</p>
+    </noscript>
+  </div>
   <script src="lessons-a1.js"></script>
   <script src="lessons-a2.js"></script>
   <script src="lessons-b.js"></script>
@@ -19,14 +24,14 @@
   <script>
     const n = Number(new URLSearchParams(location.search).get("n") || 0);
     const lesson = LESSONS.find((l) => l.n === n) || LESSONS[0];
-    document.title = `Lesson ${lesson.n} · ${lesson.title}`;
+    document.title = lesson.n === 0 ? `${lesson.title} · Grade 6 Tech` : `Lesson ${lesson.n} · ${lesson.title} · Grade 6 Tech`;
     const prev = LESSONS.find((l) => l.n === lesson.n - 1);
     const next = LESSONS.find((l) => l.n === lesson.n + 1);
     const p = lessonProgress(lesson.n);
     document.getElementById("app").innerHTML = `
       <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start;">
         <div>
-          <p class="kicker" id="lesson-kicker">Lesson ${lesson.n} · ${lesson.minutes} minutes${p.stamped ? " · stamped" : ""}</p>
+          <p class="kicker" id="lesson-kicker">${lessonLabel(lesson)} · ${lesson.minutes} minutes${p.stamped ? " · stamped" : ""}</p>
           <h1>${esc(lesson.title)}</h1>
           <p class="lead">Today you make: ${esc(lesson.project)}. ${esc(lesson.focus)}</p>
         </div>
@@ -40,6 +45,7 @@
         <button type="button" class="btn ${p.stamped ? "btn-primary" : "btn-ghost"}" data-stamp="${lesson.n}">${p.stamped ? "Stamped complete" : "Stamp complete"}</button>
       </div>
       <p class="count" id="step-count">${p.steps.length} of ${lesson.studentSteps.length} student steps checked</p>
+      <p class="hint saved-note" style="margin-top:-6px;">Stamps and checked steps are saved on this device only.</p>
       <div class="note">
         <h3>Teacher notes</h3>
         <ul>${lesson.teacher.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>

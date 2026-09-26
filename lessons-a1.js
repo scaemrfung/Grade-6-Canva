@@ -1,8 +1,8 @@
 const LESSONS_A1 = [
   {
     n: 0,
-    short: "Canva account",
-    title: "Create Your Canva Education Account",
+    short: "Setup",
+    title: "Setup – Canva Education Account",
     project: "Required first step",
     minutes: 60,
     focus: "Teachers verify a free Canva Education account and students join the class so everyone can use premium tools.",
@@ -52,14 +52,14 @@ const LESSONS_A1 = [
     ],
     challenge: "Help one classmate log in and join the class without doing it for them. Talk them through each click.",
     examples: [
-      { label: "Example A", title: "Welcome to Canva Class – Example A", url: "https://www.canva.com/d/bU8jN8c4sT3ivBm", thumb: "examples/lesson-0-a.png" },
-      { label: "Example B", title: "Welcome to Canva Class – Example B", url: "https://www.canva.com/d/q28ECTSaTr3al58", thumb: "examples/lesson-0-b.png" },
+      { label: "Setup", title: "Example: Welcome to Canva Class Poster (version 1)", url: "https://www.canva.com/d/bU8jN8c4sT3ivBm", thumb: "examples/lesson-0-a.png" },
+      { label: "Setup", title: "Example: Welcome to Canva Class Poster (version 2)", url: "https://www.canva.com/d/q28ECTSaTr3al58", thumb: "examples/lesson-0-b.png" },
     ],
   },
   {
     n: 1,
-    short: "Welcome to Canva",
-    title: "Welcome to Canva World!",
+    short: "Interface basics",
+    title: "Canva Interface Basics",
     project: "All About Me name card",
     minutes: 60,
     focus: "Log in, make a custom-size design, add text and an icon, then download a PNG.",
@@ -82,7 +82,7 @@ const LESSONS_A1 = [
       ["Demo download", "Share (top right) → Download → file type PNG → Download. Show where the file lands (Downloads folder)."]
     ],
     studentSteps: [
-      ["Open Canva and log in", "Go to canva.com. Click Log in and use the same school email from Lesson 0. Wait until you see the home page with Create a design."],
+      ["Open Canva and log in", "Go to canva.com. Click Log in and use the same school email you used in Setup. Wait until you see the home page with Create a design."],
       ["Start a custom-size design", "Click Create a design (usually a purple button). At the top of the menu click Custom size. Click the unit menu if needed and choose px. Type 800 in the first box (width) and 600 in the second box (height). Click Create new design."],
       ["Name the file", "Click Untitled design at the top of the screen. Type All About Me – Your Name. Press Enter. This makes it easy to find later."],
       ["Add your name as a heading", "On the left sidebar click Text. Click Add a heading. Type your first and last name. Click the words so a box appears around them."],
@@ -109,14 +109,14 @@ const LESSONS_A1 = [
     ],
     challenge: "Make a secret-code version of your name. Replace 2 or 3 letters with emojis (for example I ♡ ⚽). Ask a classmate to decode it in 10 seconds.",
     examples: [
-      { label: "Example A", title: "All About Me – Maya Chen (Example A)", url: "https://www.canva.com/d/O_BKfzKXNPF3OLf", thumb: "examples/lesson-1-a.png" },
-      { label: "Example B", title: "All About Me – Jordan Lee (Example B)", url: "https://www.canva.com/d/QuqJkcA7iQ_buHV", thumb: "examples/lesson-1-b.png" },
+      { label: "Interface basics", title: "Example: All About Me Name Card (version 1)", url: "https://www.canva.com/d/O_BKfzKXNPF3OLf", thumb: "examples/lesson-1-a.png" },
+      { label: "Interface basics", title: "Example: All About Me Name Card (version 2)", url: "https://www.canva.com/d/QuqJkcA7iQ_buHV", thumb: "examples/lesson-1-b.png" },
     ],
   },
   {
     n: 2,
     short: "Elements & shapes",
-    title: "Design Superpowers – Elements & Shapes",
+    title: "Elements & Shapes",
     project: "Hobby mood board",
     minutes: 60,
     focus: "Use gradients, shapes, icons, shadows, grouping, and overlap.",
@@ -162,14 +162,14 @@ const LESSONS_A1 = [
     ],
     challenge: "Mystery mood board: delete the title and any words. Use only shapes and icons. See if a classmate can guess the hobby in 10 seconds.",
     examples: [
-      { label: "Example A", title: "Ava's Hobby Board – Example A", url: "https://www.canva.com/d/OxuI0Ck3Z5T06-k", thumb: "examples/lesson-2-a.png" },
-      { label: "Example B", title: "Sam's Hobby Board – Example B", url: "https://www.canva.com/d/bc2HAWiF2mG3XKt", thumb: "examples/lesson-2-b.png" },
+      { label: "Elements & shapes", title: "Example: Hobby Mood Board (version 1)", url: "https://www.canva.com/d/OxuI0Ck3Z5T06-k", thumb: "examples/lesson-2-a.png" },
+      { label: "Elements & shapes", title: "Example: Hobby Mood Board (version 2)", url: "https://www.canva.com/d/bc2HAWiF2mG3XKt", thumb: "examples/lesson-2-b.png" },
     ],
   },
   {
     n: 3,
     short: "Typography",
-    title: "Words That Pop!",
+    title: "Typography Basics",
     project: "Motivational quote poster",
     minutes: 60,
     focus: "Pair fonts, use one strong text effect, and keep the quote readable from a distance.",
@@ -215,8 +215,8 @@ const LESSONS_A1 = [
     ],
     challenge: "Make two mini versions of the same quote: one loud (wild but still readable) and one quiet (simple and elegant). Decide which mood fits the words.",
     examples: [
-      { label: "Example A", title: "Quote Poster – Be the reason (Example A)", url: "https://www.canva.com/d/VDoWeUyO3hihOxj", thumb: "examples/lesson-3-a.png" },
-      { label: "Example B", title: "Quote Poster – Mistakes help me grow (Example B)", url: "https://www.canva.com/d/GqFTUdqhO8MTplv", thumb: "examples/lesson-3-b.png" },
+      { label: "Typography", title: "Example: Quote Poster – Be the Reason", url: "https://www.canva.com/d/VDoWeUyO3hihOxj", thumb: "examples/lesson-3-a.png" },
+      { label: "Typography", title: "Example: Quote Poster – Mistakes Help Me Grow", url: "https://www.canva.com/d/GqFTUdqhO8MTplv", thumb: "examples/lesson-3-b.png" },
     ],
   }
 ];

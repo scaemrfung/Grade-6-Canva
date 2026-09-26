@@ -1,8 +1,8 @@
 const LESSONS_A2 = [
   {
     n: 4,
-    short: "Photo magic",
-    title: "Photo Magic",
+    short: "Photo editing",
+    title: "Photo Editing",
     project: "Dream vacation collage",
     minutes: 60,
     focus: "Upload or search photos, remove backgrounds, control layers, and use transparency.",
@@ -48,14 +48,14 @@ const LESSONS_A2 = [
     ],
     challenge: "Make it surreal. Use Background Remover more than once so you appear in space, under the sea, or on a funny animal.",
     examples: [
-      { label: "Example A", title: "Dream Trip – Japan (Example A)", url: "https://www.canva.com/d/ErF5Wv3fcejk80F", thumb: "examples/lesson-4-a.png" },
-      { label: "Example B", title: "Dream Vacation – Costa Rica (Example B)", url: "https://www.canva.com/d/lmb6oA5pbK-9cc1", thumb: "examples/lesson-4-b.png" },
+      { label: "Photo editing", title: "Example: Dream Trip – Japan", url: "https://www.canva.com/d/ErF5Wv3fcejk80F", thumb: "examples/lesson-4-a.png" },
+      { label: "Photo editing", title: "Example: Dream Vacation – Costa Rica", url: "https://www.canva.com/d/lmb6oA5pbK-9cc1", thumb: "examples/lesson-4-b.png" },
     ],
   },
   {
     n: 5,
     short: "Color theory",
-    title: "Color Theory for Kids",
+    title: "Color Theory",
     project: "Two mood versions of a quote poster",
     minutes: 60,
     focus: "Warm vs cool color families and keeping a scheme consistent.",
@@ -98,14 +98,14 @@ const LESSONS_A2 = [
     ],
     challenge: "One-color mystery version: pick a single color and use only lighter and darker shades of that color (a monochrome poster).",
     examples: [
-      { label: "Example A", title: "Warm Mood Quote – Example A", url: "https://www.canva.com/d/uONbl3aaWGI5beF", thumb: "examples/lesson-5-a.png" },
-      { label: "Example B", title: "Cool Mood Quote – Example B", url: "https://www.canva.com/d/rN2OAlnfhX8Rq5C", thumb: "examples/lesson-5-b.png" },
+      { label: "Color theory", title: "Example: Warm Mood Quote", url: "https://www.canva.com/d/uONbl3aaWGI5beF", thumb: "examples/lesson-5-a.png" },
+      { label: "Color theory", title: "Example: Cool Mood Quote", url: "https://www.canva.com/d/rN2OAlnfhX8Rq5C", thumb: "examples/lesson-5-b.png" },
     ],
   },
   {
     n: 6,
-    short: "Personal logo",
-    title: "Brand Yourself – Logo Design",
+    short: "Personal logos",
+    title: "Personal Logos",
     project: "Personal logo",
     minutes: 60,
     focus: "A simple logo with initials, one symbol, few colors, and a transparent PNG.",
@@ -149,8 +149,8 @@ const LESSONS_A2 = [
     ],
     challenge: "Design a second logo for an imaginary creature using the same rules: initials or short name, one symbol, 2–3 colors, transparent PNG.",
     examples: [
-      { label: "Example A", title: "Personal Logo MC – Example A", url: "https://www.canva.com/d/xWfmdGxuXywJTd3", thumb: "examples/lesson-6-a.png" },
-      { label: "Example B", title: "Personal Logo JL – Example B", url: "https://www.canva.com/d/BFfBNhtarvdARa1", thumb: "examples/lesson-6-b.png" },
+      { label: "Personal logos", title: "Example: Personal Logo – MC Paintbrush", url: "https://www.canva.com/d/xWfmdGxuXywJTd3", thumb: "examples/lesson-6-a.png" },
+      { label: "Personal logos", title: "Example: Personal Logo – JL Basketball", url: "https://www.canva.com/d/BFfBNhtarvdARa1", thumb: "examples/lesson-6-b.png" },
     ],
   }
 ];
