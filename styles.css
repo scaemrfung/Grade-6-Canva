@@ -406,3 +406,21 @@ h3 { font-size: 22px; margin: 0 0 8px; }
 @media print {
   .examples-note .example-open { display: none; }
 }
+
+/* Rubric table */
+.rubric-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 8px 0 12px; }
+.rubric { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+.rubric th, .rubric td { border: 1px solid var(--line); padding: 10px; vertical-align: top; text-align: left; }
+.rubric thead th { background: var(--surface); font-family: var(--font-sans); }
+@media (max-width: 640px) {
+  .rubric { min-width: 0; }
+  .rubric thead { display: none; }
+  .rubric, .rubric tbody, .rubric tr, .rubric th, .rubric td { display: block; width: 100%; }
+  .rubric tr { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+  .rubric th, .rubric td { border: 0; border-top: 1px solid var(--line); }
+  .rubric tbody th { border-top: 0; background: var(--surface); }
+  .rubric td::before { content: attr(data-level); display: block; font-weight: 700; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+}
+.teacher-details summary { cursor: pointer; list-style: revert; }
+.teacher-details summary h3 { display: inline; margin: 0; }
+.teacher-details .teacher-body { margin-top: 12px; overflow-wrap: anywhere; }
